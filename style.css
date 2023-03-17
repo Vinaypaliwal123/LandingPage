@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    /*background-image: url(./images/background.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;*/
+    background-color: black;
+    
+}
+.background{
+    background-image: url(./images/pexels-roberto-nickson-2885320.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: blur(10px);
+}
+header{
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 100;
+}
+.navbar a{
+    position: relative;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 15px;
+    color: rgb(228, 236, 242);
+}
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    width:100%;
+    height:2px;
+    background: white;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .5s;
+}
+.navbar a:hover::after{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.search{
+    border:2px solid rgb(228, 236, 242);
+    padding: 3px;
+    border-radius: 10px;
+}
+.search input{
+    border: none;
+    background: none;
+    width:220px;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+.search input::placeholder{
+    color:rgba(255, 255, 255, 0.452);
+
+}
+.search i{
+    color: white;
+    font-size: 21px;
+    height: 100%;
+}
+
+.box{
+    width: 75%;
+    height: 550px;
+    background: url(./images/pexels-roberto-nickson-2885320.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+
+}
+
+.content{
+    position: absolute;
+    height:100%;
+    width: 60%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.content img{
+    width: 40px;
+}
+.logo{
+    color: white;
+    display: flex;
+}
+.intro{
+    color: white;
+}
+.intro h2{
+    font-size: 40px;
+}
+.intro h3{
+    font-size: 20px;
+    word-spacing: 7px;
+    font-weight: bolder;
+}
+.intro p{
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.contact a i{
+    color:white;
+}
+.contact{
+    font-size: 21px;
+}
+.login{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+.login form h2{
+    text-align: center;
+    font-size: 32px;
+}
+.login form .input{
+    position: relative;
+    width: 350px;
+    height:50px;
+    border-bottom:2px solid white;
+    margin-top:30px;
+}
+.input input{
+    width:100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline:none;
+    color: white;
+    font-size: larger;
+}
+
+.input label{
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    transition: .5s ease;
+}
+.input input:hover:focus~label,
+.input input:hover:valid~label{
+    top:-5px;
+}
+.input .icon{
+    position: absolute;
+    top:13px;
+    right:0;
+    font-size: 20px;
+}
+.remember{
+    display: flex;
+    justify-content: space-between;
+    margin-top:10px;
+}
+.remember a{
+    color: white;
+    text-decoration: none;
+}
+.remember a:hover{
+    text-decoration: underline;
+}
+
+.submit-button{
+    width:100%;
+    height: 45px;
+    background-color: rgb(6, 127, 146);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    margin-top: 15px;
+}
+.register{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.register a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.register a:hover{
+    text-decoration: underline;
+}
+
+
+.login.sign-up{
+    transform: translateX(430px);
+}
